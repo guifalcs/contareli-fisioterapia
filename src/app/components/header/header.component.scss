@@ -1,0 +1,88 @@
+@use '../../variables' as palete;
+
+:host {
+  width: 100%;
+}
+
+.header {
+  background-color: palete.$branco;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: 10px solid  palete.$verdeEscuro;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  padding: 0.5rem 0;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-link {
+  color:  palete.$verdeEscuro;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  outline: none;
+  text-decoration: underline;
+}
+
+.nav-button {
+  background-color:  palete.$verdeEscuro;
+  color:  palete.$branco;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  background-color:  palete.$verdeMedio;
+  color:  palete.$branco;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0;
+    padding-top: 2em;
+  }
+
+  .header-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-list {
+    visibility: hidden;
+  }
+
+  .logo {
+    img {
+      width: 200px;
+    }
+  }
+}
