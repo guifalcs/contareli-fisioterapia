@@ -1,4 +1,4 @@
-@use '../../variables' as palete;
+@use "../../variables" as palete;
 
 :host {
   width: 100%;
@@ -8,7 +8,7 @@
   background-color: palete.$branco;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  outline: 10px solid  palete.$verdeEscuro;
+  outline: 10px solid palete.$verdeEscuro;
 }
 
 .header-container {
@@ -37,7 +37,7 @@
 }
 
 .nav-link {
-  color:  palete.$verdeEscuro;
+  color: palete.$verdeEscuro;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -51,8 +51,8 @@
 }
 
 .nav-button {
-  background-color:  palete.$verdeEscuro;
-  color:  palete.$branco;
+  background-color: palete.$verdeEscuro;
+  color: palete.$branco;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   transition: background-color 0.3s ease;
@@ -60,8 +60,8 @@
 
 .nav-button:hover,
 .nav-button:focus {
-  background-color:  palete.$verdeMedio;
-  color:  palete.$branco;
+  background-color: palete.$verdeMedio;
+  color: palete.$branco;
   text-decoration: none;
 }
 
