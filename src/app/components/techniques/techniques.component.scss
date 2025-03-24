@@ -12,6 +12,7 @@
 :host ::ng-deep {
   .accordion-header {
     background-color: palete.$verdeEscuro;
+    color: palete.$branco;
   }
 
   .p-accordioncontent-content {
@@ -51,5 +52,9 @@
         margin: 1rem auto 0;
         border-radius: 2px;
       }
+  }
+
+  p {
+    background-color: palete.$verdeEscuro;
   }
 }
