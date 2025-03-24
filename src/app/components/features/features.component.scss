@@ -2,11 +2,15 @@
 
 :host {
   width: 100%;
+  background-image: url("/images/backgroundPaper.jpg");
+  background-color: rgba(palete.$begeClaro, 0.8);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .offerings {
-  background: palete.$verdeEscuro;
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   color: white;
 }
 
@@ -17,7 +21,7 @@
 }
 
 .offerings-title {
-  color: white;
+  color: palete.$verdeEscuro;
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 4rem;
@@ -72,7 +76,7 @@
 }
 
 .offering-card h3 {
-  color: white;
+  color: palete.$verdeMedio;
   font-size: 1.25rem;
   padding: 1.5rem;
   text-align: center;
@@ -80,7 +84,7 @@
 }
 
 .contact-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(palete.$verdeMedio, 0.1);
   border-radius: 25px;
   padding: 3rem;
   margin-top: 4rem;
@@ -111,14 +115,14 @@
 }
 
 .contact-item h4 {
-  color: palete.$verdeClaro;
+  color: palete.$verdeEscuro;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .contact-item p,
 .contact-item a {
-  color: white;
+  color: palete.$verdeMedio;
   font-size: 1.1rem;
   text-decoration: none;
   transition: color 0.3s ease;
