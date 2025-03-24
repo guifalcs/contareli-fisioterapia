@@ -1,12 +1,14 @@
 @use "../../variables" as palete;
-
 :host {
   width: 100%;
-  background-color: palete.$branco;
   padding: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("/images/backgroundPaper.jpg");
+  background-color: rgba(255, 255, 255, 0.6); 
+  background-blend-mode: overlay; 
+  background-size: cover;
 
   .techniques-container {
     max-width: 1200px;
