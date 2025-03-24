@@ -3,50 +3,21 @@
 :host {
   width: 100%;
   background-color: palete.$branco;
-  padding: 2em;
+  padding: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-:host ::ng-deep {
-  .accordion-header {
-    background-color: palete.$verdeEscuro;
-    color: palete.$branco;
+  .techniques-container {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .p-accordioncontent-content {
-    background-color: palete.$verdeEscuro;
-  }
-
-  .p-accordionpanel:not(.p-disabled).p-accordionpanel-active
-    > .p-accordionheader {
-    background-color: palete.$verdeEscuro;
-  }
-
-  .p-accordionpanel:not(.p-accordionpanel-active):not(.p-disabled)
-    > .p-accordionheader:hover {
-    background-color: palete.$verdeEscuro;
-  }
-
-  .p-accordionpanel:not(.p-disabled).p-accordionpanel-active
-    > .p-accordionheader {
-    background-color: palete.$verdeEscuro;
-  }
-}
-
-.techniques-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2em;
-
-  h2 {
-    font-size: 2.5em;
-    text-align: center;
+  .techniques-title {
+    font-size: 2.8rem;
     color: palete.$verdeEscuro;
+    text-align: center;
+    margin-bottom: 4rem;
 
     &::after {
       content: "";
@@ -59,7 +30,198 @@
     }
   }
 
-  p {
-    background-color: palete.$verdeEscuro;
+  .accordion {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion-item {
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion-item:last-child {
+    border-bottom: none;
+  }
+
+  .accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .accordion-header:hover {
+    background: palete.$begeClaro;
+  }
+
+  .accordion-header.active {
+    background: palete.$begeClaro;
+  }
+
+  .accordion-header.active .arrow {
+    transform: rotate(180deg);
+  }
+
+  .icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .accordion-header h3 {
+    color: palete.$verdeEscuro;
+    font-size: 1.4rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .arrow {
+    color: palete.$verdeMedio;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: white;
+    padding: 0 1.5rem;
+  }
+
+  .content-inner {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    visibility: hidden;
+    padding-bottom: 1.5rem;
+  }
+
+  .accordion-content.active {
+    padding-top: 1em;
+    max-height: 1000px;
+  }
+
+  .accordion-content.active .content-inner {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .technique-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .technique-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: palete.$verdeMedio;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .check-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pain-management {
+    padding: 1rem 0;
+  }
+
+  .pain-intro {
+    color: palete.$verdeEscuro;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .factor-card {
+    background: palete.$begeClaro;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+
+  .factor-card h4 {
+    color: palete.$verdeEscuro;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .factor-card p {
+    color: palete.$verdeMedio;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .approach-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: palete.$begeClaro;
+    border-radius: 10px;
+  }
+
+  .approach-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .approach-item p {
+    color: palete.$verdeMedio;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+
+    .techniques-title {
+      font-size: 2.2rem;
+    }
+
+    .accordion-header {
+      padding: 1.25rem;
+    }
+
+    .accordion-header h3 {
+      font-size: 1.2rem;
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+
+    .factors-grid,
+    .approach-grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

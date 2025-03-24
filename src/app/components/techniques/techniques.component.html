@@ -1,51 +1,141 @@
-<section class="techniques-container">
-  <h2>Nossas Técnicas</h2>
+<section class="techniques" aria-labelledby="techniques-title">
+  <div class="techniques-container">
+    <h2 id="techniques-title" class="techniques-title">Nossas Técnicas</h2>
 
-  <div class="card flex justify-center">
-    <p-accordion value="0">
-      <p-accordion-panel value="0">
-        <p-accordion-header class="accordion-header"
-          >Terapia Manual Avançada
-        </p-accordion-header>
-        <p-accordion-content class="accordion-content">
-          <p class="m-0">
-            ✅ Mobilização e manipulação articular (Maitland, Mulligan,
-            Quiropraxia)
-          </p>
-          <p class="m-0">✅ Técnicas para restaurar movimento e reduzir dor</p>
-        </p-accordion-content>
-      </p-accordion-panel>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          (click)="toggleAccordion(0)"
+          [class.active]="activeIndex === 0"
+        >
+          <h3>Terapia Manual Avançada</h3>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-content" [class.active]="activeIndex === 0">
+          <div class="content-inner">
+            <ul class="technique-list">
+              <li>• Mobilização e manipulação articular</li>
+              <li>• Técnicas para restaurar movimento e reduzir dor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <p-accordion-panel value="1">
-        <p-accordion-header class="accordion-header"
-          >Dry Needling (Agulhamento Seco)
-        </p-accordion-header>
-        <p-accordion-content>
-          <p class="m-0">✅ Alívio imediato da dor muscular</p>
-          <p class="m-0">✅ Redução de pontos-gatilho dolorosos</p>
-        </p-accordion-content>
-      </p-accordion-panel>
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          (click)="toggleAccordion(1)"
+          [class.active]="activeIndex === 1"
+        >
+          <h3>Dry Needling</h3>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-content" [class.active]="activeIndex === 1">
+          <div class="content-inner">
+            <ul class="technique-list">
+              <li>• Alívio imediato da dor muscular</li>
+              <li>• Redução de pontos-gatilho dolorosos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <p-accordion-panel value="2">
-        <p-accordion-header class="accordion-header"
-          >Neurodinâmica e Mobilização Neural
-        </p-accordion-header>
-        <p-accordion-content>
-          <p class="m-0">✅ Tratamento para dores irradiadas e formigamentos</p>
-        </p-accordion-content>
-      </p-accordion-panel>
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          (click)="toggleAccordion(2)"
+          [class.active]="activeIndex === 2"
+        >
+          <h3>Neurodinâmica e Mobilização Neural</h3>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-content" [class.active]="activeIndex === 2">
+          <div class="content-inner">
+            <ul class="technique-list">
+              <li>• Tratamento para dores irradiadas e formigamentos</li>
+              <li>• Melhora da condução nervosa e alívio dos sintomas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <p-accordion-panel value="3">
-        <p-accordion-header class="accordion-header"
-          >Exercícios Terapêuticos e Reabilitação Funcional
-        </p-accordion-header>
-        <p-accordion-content>
-          <p class="m-0">✅ Exercícios personalizados para alívio da dor</p>
-          <p class="m-0">
-            ✅ Programas individualizados voltados para sua rotina
-          </p>
-        </p-accordion-content>
-      </p-accordion-panel>
-    </p-accordion>
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          (click)="toggleAccordion(3)"
+          [class.active]="activeIndex === 3"
+        >
+          <h3>Exercícios Terapêuticos</h3>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-content" [class.active]="activeIndex === 3">
+          <div class="content-inner">
+            <ul class="technique-list">
+              <li>• Exercícios personalizados para alívio da dor</li>
+              <li>• Programas individualizados para sua rotina</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button
+          class="accordion-header"
+          (click)="toggleAccordion(4)"
+          [class.active]="activeIndex === 4"
+        >
+          <h3>Gestão Emocional da Dor</h3>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="accordion-content" [class.active]="activeIndex === 4">
+          <div class="content-inner">
+            <div class="pain-management">
+              <p class="pain-intro">
+                • A dor não é apenas um fenômeno físico, ela é influenciada por
+                emoções, pensamentos e o ambiente ao nosso redor.
+              </p>
+
+              <div class="factors-grid">
+                <div class="factor-card">
+                  <h4>Fatores Biológicos</h4>
+                  <p>
+                    Lesões, inflamações, desequilíbrios musculoesqueléticos e
+                    sensibilização do sistema nervoso.
+                  </p>
+                </div>
+                <div class="factor-card">
+                  <h4>Fatores Psicológicos</h4>
+                  <p>
+                    Estresse, ansiedade, depressão, medo do movimento e crenças
+                    negativas sobre a dor.
+                  </p>
+                </div>
+                <div class="factor-card">
+                  <h4>Fatores Sociais</h4>
+                  <p>
+                    Estilo de vida, hábitos de trabalho, qualidade do sono e
+                    suporte familiar.
+                  </p>
+                </div>
+              </div>
+
+              <p class="pain-intro">• Como trabalhamos com a gestão da dor?</p>
+              <div class="approach-grid">
+                <div class="approach-item">
+                  <p>Educação sobre a dor e estratégias de enfrentamento</p>
+                </div>
+                <div class="approach-item">
+                  <p>Técnicas de relaxamento e mindfulness</p>
+                </div>
+                <div class="approach-item">
+                  <p>Reprogramação do movimento e redução do medo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
