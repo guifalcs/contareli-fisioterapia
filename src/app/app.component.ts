@@ -3,11 +3,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { TechniquesComponent } from './components/techniques/techniques.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, TreatmentsComponent, FeaturesComponent],
+  imports: [HeaderComponent, HeroComponent, TreatmentsComponent, FeaturesComponent, TechniquesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
