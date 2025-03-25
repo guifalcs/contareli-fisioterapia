@@ -2,7 +2,9 @@
 
 :host {
   width: 100%;
-  padding: 4em 2em;
+  padding: 2em 2em;
+  background-color: palete.$verdeEscuro;
+  height: fit-content;
 }
 
 .map-container {
@@ -11,38 +13,46 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
 
-  h2 {
-    font-size: 2.8rem;
-    color: palete.$verdeEscuro;
-    text-align: center;
-    margin-bottom: 2rem;
+.map {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
 
-    &::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: palete.$verdeClaro;
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
+  p {
+    color: palete.$branco;
+    font-weight: 500;
+    font-size: 1.1em;
   }
 
-  .map {
+  .location {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.5em;
+    align-items: center;
+    gap: 1em;
 
-    p {
-      color: palete.$verdeEscuro;
-      font-weight: 500;
+    img {
+      width: 48px;
+      height: 48px;
     }
 
-    google-map {
-      border: 2px solid palete.$verdeEscuro;
+    .address {
+      position: relative;
+      padding-left: 20px; 
+      
+      &::before {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 80px;
+        background: palete.$verdeClaro;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 2px;
+      }
     }
   }
 }
