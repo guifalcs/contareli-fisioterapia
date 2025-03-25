@@ -9,7 +9,7 @@ import { GoogleMap } from '@angular/google-maps';
 })
 export class MapsComponent {
   options: google.maps.MapOptions = {
-    center: {lat: 50, lng: 20},
+    center: {lat: -19.50834073361128, lng: -42.57360633015932},
     zoom: 4
   };
 }
