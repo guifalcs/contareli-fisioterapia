@@ -1,0 +1,53 @@
+@use "../../variables" as palete;
+
+:host {
+  width: 100%;
+  padding: 4em 2em;
+  background-image: url("/images/backgroundPaper.jpg");
+  background-color: rgba(palete.$begeClaro, 0.8);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 2.8rem;
+    color: palete.$verdeEscuro;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: palete.$verdeClaro;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5em;
+
+    p {
+      color: palete.$verdeEscuro;
+      font-weight: 500;
+    }
+
+    google-map {
+      border: 2px solid palete.$verdeEscuro;
+    }
+  }
+}

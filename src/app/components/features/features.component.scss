@@ -83,55 +83,6 @@
   margin: 0;
 }
 
-.contact-card {
-  background: palete.$branco;
-  border-radius: 25px;
-  padding: 3rem;
-  margin-top: 4rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-}
-
-.contact-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.contact-icon {
-  font-size: 2.5rem;
-}
-
-.contact-divider {
-  width: 2px;
-  height: 60px;
-  background: rgba(palete.$verdeEscuro, 0.2);
-}
-
-.contact-item h4 {
-  color: palete.$verdeEscuro;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-item p,
-.contact-item a {
-  color: palete.$verdeMedio;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
-  color: palete.$verdeClaro;
-}
-
 @media (max-width: 968px) {
   .offerings {
     padding: 4rem 1rem;
@@ -144,31 +95,11 @@
   .offerings-title {
     font-size: 2.3rem;
   }
-
-  .contact-info {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .contact-divider {
-    width: 80%;
-    height: 2px;
-  }
 }
 
 @media (max-width: 768px) {
   .offerings-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .contact-card {
-    padding: 2rem;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
   }
 }
