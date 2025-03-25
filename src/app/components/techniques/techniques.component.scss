@@ -5,11 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/backgroundPaper.jpg");
-  background-color: rgba(palete.$begeClaro, 0.9);
-  background-blend-mode: overlay; 
-  background-size: cover;
-  background-attachment: fixed;
 
   .techniques-container {
     max-width: 1200px;
