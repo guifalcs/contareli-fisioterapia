@@ -1,0 +1,98 @@
+@use "../../variables" as palete;
+
+:host {
+  width: 100%;
+  background-color: rgba(palete.$begeClaro, 0.3);
+  padding: 3rem 0;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h2 {
+    color: palete.$verdeEscuro;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: palete.$verdeMedio;
+      margin: 1rem auto 0;
+      border-radius: 2px;
+    }
+  }
+
+  .content {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.5rem;
+
+    .paragraph-container {
+      position: relative;
+      padding: 1.5rem;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      p {
+        color: palete.$verdeEscuro;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .quote-mark {
+        position: absolute;
+        font-size: 6rem;
+        color: rgba(palete.$verdeMedio, 0.2);
+        top: -1.5rem;
+        left: 0;
+        font-family: serif;
+        z-index: 0;
+        
+        &.closing {
+          top: auto;
+          bottom: -4rem;
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+    
+    .highlight {
+      background-color: rgba(palete.$verdeMedio, 0.1);
+      border-left: 4px solid palete.$verdeMedio;
+    }
+    
+    .emphasis {
+      text-align: right;
+      background-color: rgba(palete.$verdeEscuro, 0.1);
+      border-right: 4px solid palete.$verdeEscuro;
+      
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about .content {
+    width: 90%;
+  }
+}
+a
