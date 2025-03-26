@@ -31,7 +31,9 @@
   .location {
     display: flex;
     align-items: center;
-    gap: 1em;
+    flex-direction: column;
+    font-style: italic ;
+
 
     img {
       width: 48px;
