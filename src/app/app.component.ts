@@ -7,11 +7,22 @@ import { FeaturesComponent } from './components/features/features.component';
 import { TechniquesComponent } from './components/techniques/techniques.component';
 import { MapsComponent } from './components/maps/maps.component';
 import { AboutComponent } from './components/about/about.component';
+import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, TreatmentsComponent, FeaturesComponent, TechniquesComponent, MapsComponent, AboutComponent, FooterComponent],
+  imports: [
+    HeaderComponent,
+    HeroComponent,
+    TreatmentsComponent,
+    FeaturesComponent,
+    TechniquesComponent,
+    MapsComponent,
+    AboutComponent,
+    FooterComponent,
+    AboutCeoComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
