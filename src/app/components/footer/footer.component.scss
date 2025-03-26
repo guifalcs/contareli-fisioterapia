@@ -1,0 +1,123 @@
+@use "../../variables" as palete;
+
+:host {
+    width: 100%;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    background-color: palete.$verdeEscuro;
+}
+
+.footer {
+    color: palete.$branco;
+    padding: 4rem 2rem 2rem;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-section h3 {
+    color: palete.$verdeClaro;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .footer-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 40px;
+    height: 2px;
+    background-color: palete.$verdeClaro;
+  }
+
+  .footer-section p {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .footer-link {
+    color: palete.$branco;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: palete.$verdeClaro;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .social-link:hover {
+    background-color: palete.$verdeClaro;
+    transform: translateY(-3px);
+  }
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  @media (max-width: 968px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .footer {
+      padding: 3rem 1rem 1.5rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-section {
+      text-align: center;
+    }
+
+    .footer-section h3::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .social-links {
+      justify-content: center;
+    }
+  }
