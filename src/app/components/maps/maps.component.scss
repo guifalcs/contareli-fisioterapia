@@ -40,9 +40,13 @@
       height: 48px;
     }
 
+    .attendence {
+      padding: 0 20px;
+    }
+
     .address {
       position: relative;
-      padding-left: 20px; 
+      padding: 0 20px; 
       
       &::before {
         content: "";
