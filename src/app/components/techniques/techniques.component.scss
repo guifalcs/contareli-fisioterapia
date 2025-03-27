@@ -102,6 +102,11 @@
     transition: all 0.3s ease;
     visibility: hidden;
     padding-bottom: 1.5rem;
+    color: palete.$verdeEscuro;
+
+    span {
+      font-weight: 500;
+    }
   }
 
   .accordion-content.active {
@@ -142,9 +147,6 @@
   .pain-intro {
     color: palete.$verdeEscuro;
     margin-bottom: 2rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-weight: 500;
   }
 
   .factors-grid {
@@ -167,10 +169,9 @@
   }
 
   .factor-card p {
-    color: palete.$verdeMedio;
+    color: palete.$verdeEscuro;
     line-height: 1.5;
     margin: 0;
-    font-weight: 500;
   }
 
   .approach-grid {
@@ -194,10 +195,9 @@
   }
 
   .approach-item p {
-    color: palete.$verdeMedio;
+    color: palete.$verdeEscuro;
     margin: 0;
     font-size: 1rem;
-    font-weight: 500;
   }
 
   @media (max-width: 768px) {
