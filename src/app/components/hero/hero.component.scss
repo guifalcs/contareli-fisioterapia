@@ -42,6 +42,7 @@ section {
       font-size: 1.125rem;
 
       &:hover {
+        cursor: pointer;
         background-color: palete.$verdeMedio;
       }
     }
