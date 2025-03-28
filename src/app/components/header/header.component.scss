@@ -1,91 +1,70 @@
 @use "../../variables" as palete;
 
 :host {
+  color: palete.$verdeEscuro;
   width: 100%;
 }
 
-.header {
-  background-color: palete.$branco;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
+header {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
-  align-items: center;
-  padding: 0 1rem;
-}
+  padding: 2em;
+  gap: 1em;
+  padding-bottom: 1em;
+  width: 100%;
+  border-bottom: solid 3px palete.$verdeEscuro;
 
-.logo {
-  padding: 0.5rem 0;
-}
-
-.logo img {
-  max-height: 50px;
-  width: auto;
-}
-
-.nav-list {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  align-items: center;
-}
-
-.nav-link {
-  color: palete.$verdeEscuro;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  padding: 0.5rem;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-.nav-button {
-  background-color: palete.$verdeEscuro;
-  color: palete.$branco;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover,
-.nav-button:focus {
-  background-color: palete.$verdeMedio;
-  color: palete.$branco;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 0;
-    padding-top: 2em;
+  img {
+    height: 4em;
   }
 
-  .header-container {
-    flex-direction: column;
-    padding: 0;
-  }
+  ul {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
 
-  .nav-list {
-    visibility: hidden;
-  }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      padding: 0.5em;
 
-  .logo {
-    img {
-      width: 200px;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .schedule-button {
+      padding: 0.75em 1.25em;
+      background-color: palete.$verdeEscuro;
+      color: palete.$branco;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        text-decoration: none;
+        background-color: palete.$verdeMedio;
+      }
     }
   }
-}
 
-.divider {
-  outline: 2px solid palete.$verdeEscuro;
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    nav {
+      display: none;
+    }
+  }
+
+  @media (max-width: 340px) {
+    padding: 1em;
+
+    img {
+      height: 3em;
+    }
+  }
 }
