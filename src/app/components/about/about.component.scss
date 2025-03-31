@@ -2,13 +2,14 @@
 
 :host {
   width: 100%;
+  color: palete.$verdeEscuro;
+}
+
+section {
   background-color: rgba(palete.$begeClaro, 0.4);
   padding: 3rem 0;
   border-top-right-radius: 80px;
   border-top-left-radius: 80px;
-}
-
-.about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +51,6 @@
       }
 
       p {
-        color: palete.$verdeEscuro;
         font-size: 1.1rem;
         line-height: 1.6;
         position: relative;
@@ -89,11 +89,5 @@
         font-weight: 500;
       }
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .about .content {
-    width: 90%;
   }
 }
