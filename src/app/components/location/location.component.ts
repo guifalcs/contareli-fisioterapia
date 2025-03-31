@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { GoogleMap, MapMarker } from '@angular/google-maps';
 
 @Component({
-  selector: 'app-maps',
+  selector: 'app-location',
   imports: [GoogleMap, MapMarker],
-  templateUrl: './maps.component.html',
-  styleUrl: './maps.component.scss',
+  templateUrl: './location.component.html',
+  styleUrl: './location.component.scss',
 })
-export class MapsComponent {}
+export class LocationComponent {}

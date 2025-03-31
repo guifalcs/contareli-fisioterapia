@@ -5,7 +5,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { TreatmentsComponent } from './components/treatments/treatments.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { TechniquesComponent } from './components/techniques/techniques.component';
-import { MapsComponent } from './components/maps/maps.component';
+import { LocationComponent } from './components/location/location.component';
 import { AboutComponent } from './components/about/about.component';
 import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
 
@@ -18,7 +18,7 @@ import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
     TreatmentsComponent,
     FeaturesComponent,
     TechniquesComponent,
-    MapsComponent,
+    LocationComponent,
     AboutComponent,
     FooterComponent,
     AboutCeoComponent,
