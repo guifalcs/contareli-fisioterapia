@@ -1,235 +1,179 @@
 @use "../../variables" as palete;
 
 :host {
-    width: 100%;
+  width: 100%;
+  color: palete.$verdeEscuro;
 }
 
-.doctor-section {
-    position: relative;
-    padding: 3em;
-    overflow: hidden;
-    background: linear-gradient(135deg, palete.$begeClaro 0%, #ffffff 100%);
-}
-
-.background-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(palete.$verdeClaro 2px, transparent 2px);
-    background-size: 30px 30px;
-    opacity: 0.1;
-    pointer-events: none;
+section {
+  position: relative;
+  padding: 3em;
+  overflow: hidden;
+  background: linear-gradient(135deg, palete.$begeClaro 0%, #ffffff 100%);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 6rem;
-    align-items: center;
-    position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
 }
 
 .image-container {
-    flex: 0 0 40%;
-    position: relative;
-}
+  flex: 0 0 40%;
+  position: relative;
 
-.image-frame {
+  img {
     position: relative;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transform: perspective(1000px) rotateY(-5deg);
     transition: transform 0.5s ease;
-}
 
-.image-frame:hover {
-    transform: perspective(1000px) rotateY(0deg);
+    &:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+  }
 }
 
 .doctor-image {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-}
-
-.decorative-circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px dashed palete.$verdeClaro;
-    border-radius: 50%;
-    top: -30px;
-    left: -30px;
-    z-index: -1;
-    animation: rotate 20s linear infinite;
-}
-
-.decorative-dots {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 100px;
-    height: 100px;
-    background-image: radial-gradient(palete.$verdeMedio 2px, transparent 2px);
-    background-size: 10px 10px;
-    z-index: -1;
-}
-
-.content {
-    flex: 1;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .title-container {
-    margin-bottom: 3rem;
-}
+  margin-bottom: 3rem;
 
-.subtitle {
+  .title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 3px;
+      background: palete.$verdeClaro;
+      border-radius: 2px;
+    }
+  }
+
+  .subtitle {
     color: palete.$verdeMedio;
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     display: block;
     margin-bottom: 1rem;
-}
+  }
 
-.title {
-    color: palete.$verdeEscuro;
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
-.title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    width: 60px;
-    height: 3px;
-    background: palete.$verdeClaro;
-    border-radius: 2px;
-}
-
-.specialty {
+  .specialty {
     color: palete.$verdeMedio;
     font-size: 1.2rem;
     display: block;
     margin-top: 1.5rem;
+  }
 }
 
 .qualifications {
-    display: grid;
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
 
-.qualification-item {
+  .qualification-item {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: flex-start;
     padding: 1rem;
     border-radius: 15px;
     transition: all 0.3s ease;
-}
 
-.qualification-item:hover {
-    background: rgba(255, 255, 255, 0.8);
-    transform: translateX(10px);
-}
+    &:hover {
+      background: rgba(255, 255, 255, 0.8);
+      transform: translateX(10px);
+    }
 
-.icon {
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 340px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .icon {
     padding: 0.75rem;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    
+
     img {
-        margin-top: 7px;
-        width: 48px;
+      margin-top: 7px;
+      width: 48px;
     }
-}
-
-.qualification-item h3 {
-    color: palete.$verdeEscuro;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.qualification-item p {
-    color: palete.$verdeEscuro;
-}
-
-.quote {
-    position: relative;
-    padding: 2rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    margin-top: 3rem;
-}
-
-.quote-icon {
-    color: palete.$verdeClaro;
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: white;
-    padding: 0.5rem;
-    border-radius: 50%;
-}
-
-.quote p {
-    color: palete.$verdeMedio;
-    font-style: italic;
-    line-height: 1.6;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  }
 }
 
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        gap: 4rem;
-    }
+  .container {
+    flex-direction: column;
+    gap: 4rem;
+  }
 
-    .image-container {
-        flex: 0 0 100%;
-    }
+  .image-container {
+    flex: 0 0 100%;
+  }
 
-    .doctor-image {
-        height: 500px;
-    }
+  .doctor-image {
+    height: 500px;
+  }
 }
 
 @media (max-width: 768px) {
-    .doctor-section {
-        padding: 4rem 1rem;
-    }
+  section {
+    padding: 4rem 1rem;
+  }
 
-    .title {
-        font-size: 2.5rem;
-    }
+  .title {
+    font-size: 2.5rem;
+  }
 
-    .doctor-image {
-        height: 400px;
-    }
+  .doctor-image {
+    height: 400px;
+  }
 
-    .qualification-item {
-        padding: 0.5rem;
-    }
+  .qualification-item {
+    padding: 0.5rem;
+  }
 
-    .icon {
-        padding: 0.75rem;
-    }
+  .icon {
+    padding: 0.75rem;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
