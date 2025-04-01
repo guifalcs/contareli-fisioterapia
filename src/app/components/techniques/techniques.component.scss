@@ -103,6 +103,9 @@
     visibility: hidden;
     padding-bottom: 1.5rem;
     color: palete.$verdeEscuro;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 
     span {
       font-weight: 500;
@@ -110,7 +113,7 @@
   }
 
   .accordion-content.active {
-    padding-top: 1em;
+    padding: 1.5em 3em;
     max-height: 1500px;
   }
 
