@@ -1,4 +1,5 @@
 @use "../../variables" as palete;
+
 :host {
   width: 100%;
   padding: 0em 3em 4em;
@@ -35,52 +36,49 @@
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
 
-  .accordion-item {
-    background: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
+    .accordion-item {
+      background: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-  .accordion-item:last-child {
-    border-bottom: none;
-  }
+      &:last-child {
+        border-bottom: none;
+      }
+    }
 
-  .accordion-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: white;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: white;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-  .accordion-header:hover {
-    background: palete.$begeClaro;
-  }
+      &:hover,
+      &.active {
+        background: palete.$begeClaro;
+      }
 
-  .accordion-header.active {
-    background: palete.$begeClaro;
-  }
+      &.active .arrow {
+        transform: rotate(180deg);
+      }
 
-  .accordion-header.active .arrow {
-    transform: rotate(180deg);
+      h3 {
+        color: palete.$verdeEscuro;
+        font-size: 1.4rem;
+        margin: 0;
+        flex-grow: 1;
+        text-align: left;
+      }
+    }
   }
 
   .icon {
     font-size: 2rem;
     flex-shrink: 0;
-  }
-
-  .accordion-header h3 {
-    color: palete.$verdeEscuro;
-    font-size: 1.4rem;
-    margin: 0;
-    flex-grow: 1;
-    text-align: left;
   }
 
   .arrow {
@@ -90,10 +88,21 @@
 
   .accordion-content {
     max-height: 0;
-    overflow: scroll;
+    overflow: hidden;
     transition: max-height 0.3s ease-out;
     background: white;
     padding: 0 1.5rem;
+
+    &.active {
+      padding: 1.5em 2em;
+      max-height: 1500px;
+
+      .content-inner {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
   }
 
   .content-inner {
@@ -116,30 +125,19 @@
     }
   }
 
-  .accordion-content.active {
-    padding: 1.5em 2em;
-    max-height: 1500px;
-  }
-
-  .accordion-content.active .content-inner {
-    opacity: 1;
-    transform: translateY(0);
-    visibility: visible;
-  }
-
   .technique-list {
     list-style: none;
     padding: 0;
-  }
 
-  .technique-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: palete.$verdeMedio;
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem;
-    font-weight: 500;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: palete.$verdeMedio;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
   }
 
   .check-icon {
@@ -167,18 +165,18 @@
     background: palete.$begeClaro;
     padding: 1.5rem;
     border-radius: 10px;
-  }
 
-  .factor-card h4 {
-    color: palete.$verdeEscuro;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
+    h4 {
+      color: palete.$verdeEscuro;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
 
-  .factor-card p {
-    color: palete.$verdeEscuro;
-    line-height: 1.5;
-    margin: 0;
+    p {
+      color: palete.$verdeEscuro;
+      line-height: 1.5;
+      margin: 0;
+    }
   }
 
   .approach-grid {
@@ -194,17 +192,17 @@
     padding: 1rem;
     background: palete.$begeClaro;
     border-radius: 10px;
-  }
 
-  .approach-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
+    .approach-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
 
-  .approach-item p {
-    color: palete.$verdeEscuro;
-    margin: 0;
-    font-size: 1rem;
+    p {
+      color: palete.$verdeEscuro;
+      margin: 0;
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 768px) {
@@ -214,10 +212,10 @@
 
     .accordion-header {
       padding: 1.25rem;
-    }
 
-    .accordion-header h3 {
-      font-size: 1.2rem;
+      h3 {
+        font-size: 1.2rem;
+      }
     }
 
     .icon {
