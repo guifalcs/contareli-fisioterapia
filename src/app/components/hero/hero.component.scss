@@ -46,6 +46,11 @@ section {
         cursor: pointer;
         background-color: palete.$verdeMedio;
       }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 
