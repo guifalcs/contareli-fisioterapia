@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +8,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  @Output() scrollToSection = new EventEmitter<string>();
+
+  scrollTo(section: string) {
+    this.scrollToSection.emit(section);
+  }
+}

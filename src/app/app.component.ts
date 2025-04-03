@@ -28,4 +28,8 @@ import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
 })
 export class AppComponent {
   title = 'contareli-fisioterapia';
+
+  scrollTo(section: string) {
+    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

@@ -2,11 +2,13 @@
   <img src="images/logo.png" alt="Logo Contareli Centro de Fisioterapia" />
   <nav>
     <ul class="nav-list">
-      <li>Início</li>
-      <li>Sobre</li>
-      <li>Tratamentos</li>
-      <li>Contato</li>
-      <li class="schedule-button" role="button"><a href="https://wa.me/5531999316529">Agendar</a></li>
+      <li (click)="scrollTo('hero')" role="link">Início</li>
+      <li (click)="scrollTo('about')" role="link">Sobre</li>
+      <li (click)="scrollTo('treatments')" role="link">Tratamentos</li>
+      <li (click)="scrollTo('maps')" role="link">Localização</li>
+      <li class="schedule-button" role="button">
+        <a href="https://wa.me/5531999316529">Agendar</a>
+      </li>
     </ul>
   </nav>
 </header>
