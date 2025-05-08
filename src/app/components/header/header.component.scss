@@ -58,9 +58,11 @@ header {
     }
   }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media (max-width: 978px) {
+    gap: 0.5em;
+  }
 
+  @media (max-width: 768px) {
     nav {
       display: none;
     }
