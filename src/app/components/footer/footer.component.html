@@ -2,23 +2,32 @@
   <div class="content">
     <div class="section">
       <h3>Endereço</h3>
-      <p>Av. Castelo Branco, 896 - Sala 606</p>
-      <p>Horto, Ipatinga - MG</p>
-      <p>CEP: 35160-294</p>
+      <div class="social-links">
+        <a class="link" aria-label="Location" (click)="showLocation()">
+          <img src="/icons/location.png" alt="Endereço da clínica" />
+        </a>
+      </div>
     </div>
 
     <div class="section">
       <h3>Contato</h3>
-      <p>(31) 99931-6529</p>
-      <p>contarelicentrodefisioterapia&#64;gmail.com</p>
+      <div class="social-links">
+        <a class="link" aria-label="Email" (click)="showEmail()">
+          <img src="/icons/email.png" alt="Email de contato" />
+        </a>
+        <a class="link" aria-label="Phone number" (click)="showPhoneNumber()">
+          <img src="/icons/phone.png" alt="Número de contato" />
+        </a>
+      </div>
     </div>
 
     <div class="section">
       <h3>Horário</h3>
-      <p>Segunda à Sexta:</p>
-      <p>07:00 - 19:00</p>
-      <p>Sábado: 07:00 - 13:00</p>
-      <p class="disclaimer">* Mediante a agendamento</p>
+      <div class="social-links">
+        <a class="link" aria-label="Schedule" (click)="showSchedule()">
+          <img src="/icons/scheduling.png" alt="Link para o Instagram" />
+        </a>
+      </div>
     </div>
 
     <div class="section">

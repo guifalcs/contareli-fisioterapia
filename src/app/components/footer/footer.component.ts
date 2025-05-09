@@ -9,5 +9,33 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   imports: [],
 })
 export class FooterComponent {
+  protected showLocation() {
+    alert(`
+      Av. Castelo Branco, 896 - Sala 606
+      Horto, Ipatinga - MG
+      CEP: 35160-294
+      `);
+  }
 
+  protected showEmail() {
+    alert(`
+      contarelicentrodefisioterapia@gmail.com
+      `);
+  }
+
+  protected showPhoneNumber() {
+    alert(`
+      (31) 99931-6529
+      `);
+  }
+
+  protected showSchedule() {
+    alert(`
+      Segunda à Sexta:
+      07:00 - 19:00
+      Sábado: 07:00 - 13:00
+      
+      *Mediante à agendamento prévio
+      `);
+  }
 }
