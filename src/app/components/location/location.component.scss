@@ -14,9 +14,27 @@ section {
   background: linear-gradient(135deg, #074C2D, #0B7545);
   padding: 4em 2em;
   height: fit-content;
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.3), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; 
+  position: relative;
+  transform: translateZ(0); 
 
   @media (max-width: 340px) {
     padding: 4em 0;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px rgba(143, 227, 118, 0.1);
+    pointer-events: none;
   }
 }
 
