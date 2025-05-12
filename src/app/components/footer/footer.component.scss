@@ -84,6 +84,7 @@ footer {
     &:hover {
       background-color: palete.$verdeClaro;
       transform: translateY(-3px);
+      cursor: pointer;
     }
   }
 }
