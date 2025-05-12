@@ -6,7 +6,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrl: './footer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [],
 })
 export class FooterComponent {
   protected showLocation() {

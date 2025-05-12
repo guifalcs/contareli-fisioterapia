@@ -6,7 +6,6 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angul
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [],
 })
 export class HeaderComponent {
   @Output() scrollToSection = new EventEmitter<string>();
