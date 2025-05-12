@@ -96,7 +96,7 @@
 
     &.active {
       padding: 1.5em 2em;
-      max-height: 1500px;
+      max-height: fit-content;
 
       .content-inner {
         opacity: 1;
