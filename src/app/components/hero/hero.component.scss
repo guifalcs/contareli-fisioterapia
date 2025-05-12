@@ -15,7 +15,8 @@ section {
   min-height: 500px;
   background-image: url("../../../../public/images/samara2.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+  background-attachment: fixed;
 
   &::before {
     content: "";
