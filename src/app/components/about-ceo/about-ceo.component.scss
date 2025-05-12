@@ -60,7 +60,12 @@ section {
       bottom: -10px;
       width: 60px;
       height: 3px;
-      background: palete.$verdeClaro;
+      background: linear-gradient(
+        90deg,
+        palete.$verdeClaro,
+        palete.$verdeMedio
+      );
+
       border-radius: 2px;
     }
   }

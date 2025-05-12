@@ -16,18 +16,20 @@ section {
   flex-direction: column;
 
   h2 {
-    color: palete.$verdeEscuro;
     font-size: 2.8rem;
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: palete.$verdeEscuro;
+    position: relative;
 
     &::after {
       content: "";
       display: block;
-      width: 80px;
+      width: 100px;
       height: 4px;
-      background: palete.$verdeMedio;
+      background: linear-gradient(90deg, palete.$verdeClaro, palete.$verdeMedio);
       margin: 1rem auto 0;
-      border-radius: 2px;
+      border-radius: 4px;
     }
   }
 

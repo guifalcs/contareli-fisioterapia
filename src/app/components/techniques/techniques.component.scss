@@ -13,20 +13,21 @@
     padding: 2em 1em;
   }
 
-  .techniques-title {
+  .techniques-title{
     font-size: 2.8rem;
-    color: palete.$verdeEscuro;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
+    color: palete.$verdeEscuro;
+    position: relative;
 
     &::after {
       content: "";
       display: block;
-      width: 80px;
+      width: 100px;
       height: 4px;
-      background: palete.$verdeClaro;
+      background: linear-gradient(90deg, palete.$verdeClaro, palete.$verdeMedio);
       margin: 1rem auto 0;
-      border-radius: 2px;
+      border-radius: 4px;
     }
   }
 
