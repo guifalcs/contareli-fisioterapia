@@ -8,6 +8,7 @@ import { TechniquesComponent } from './components/techniques/techniques.componen
 import { LocationComponent } from './components/location/location.component';
 import { AboutComponent } from './components/about/about.component';
 import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
+import { ClinicPreviewComponent } from './components/clinic-preview/clinic-preview.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { AboutCeoComponent } from './components/about-ceo/about-ceo.component';
     AboutComponent,
     FooterComponent,
     AboutCeoComponent,
+    ClinicPreviewComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

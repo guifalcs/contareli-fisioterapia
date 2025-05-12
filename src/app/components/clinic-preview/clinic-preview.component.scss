@@ -1,0 +1,79 @@
+@use "../../variables" as palete;
+
+:host {
+    width: 100%;
+}
+
+section {
+  width: 100%;
+  background-color: rgba(palete.$begeClaro, 0.4);
+  border-radius: 80px;
+  color: palete.$verdeEscuro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  padding-top: 4em;
+  gap: 2em;
+
+  h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: palete.$verdeEscuro;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, palete.$verdeClaro, palete.$verdeMedio);
+      margin: 1rem auto 0;
+      border-radius: 4px;
+    }
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: palete.$branco;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(
+      60deg,
+      rgba(palete.$verdeEscuro, 0.02) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(palete.$verdeEscuro, 0.02) 50%,
+      rgba(palete.$verdeEscuro, 0.02) 75%,
+      transparent 75%,
+      transparent 100%
+    );
+
+    background-size: 4px 10px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    video {
+      height: 30em;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    padding: 0.5em;
+    padding-top: 2em;
+  }
+}
