@@ -31,10 +31,28 @@ header {
       justify-content: center;
       font-weight: 500;
       padding: 0.5em;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: palete.$verdeEscuro;
+        transition: 
+          width 0.3s ease,
+          left 0.3s ease;
+      }
 
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
+
+        &::after {
+          left: 0;
+          width: 100%;
+        }
       }
     }
 
