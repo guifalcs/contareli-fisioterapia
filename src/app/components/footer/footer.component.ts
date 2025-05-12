@@ -17,15 +17,10 @@ export class FooterComponent {
       `);
   }
 
-  protected showEmail() {
-    alert(`
-      contarelicentrodefisioterapia@gmail.com
-      `);
-  }
-
-  protected showPhoneNumber() {
+  protected showContactInfo() {
     alert(`
       (31) 99931-6529
+      contarelicentrodefisioterapia@gmail.com
       `);
   }
 
