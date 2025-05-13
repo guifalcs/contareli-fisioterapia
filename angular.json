@@ -52,7 +52,11 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "sourceMap": false,
+              "optimization": true,
+              "aot": true,
+              "namedChunks": false
             },
             "development": {
               "optimization": false,
