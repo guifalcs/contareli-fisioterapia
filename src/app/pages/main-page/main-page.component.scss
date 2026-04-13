@@ -1,3 +1,17 @@
 :host {
     width: 100%;
+    display: block;
+    overflow-x: clip;
+}
+
+app-hero,
+app-treatments,
+app-features,
+app-techniques,
+app-location,
+app-about,
+app-clinic-preview,
+app-about-ceo,
+app-footer {
+    display: block;
 }
