@@ -3,27 +3,27 @@
     <div class="section">
       <h3>Endereço</h3>
       <div class="social-links">
-        <a class="link" aria-label="Location" (click)="showLocation()">
+        <button type="button" class="link" aria-label="Location" (click)="showLocation()">
           <img src="/icons/location.png" alt="Endereço da clínica" loading="lazy"/>
-        </a>
+        </button>
       </div>
     </div>
 
     <div class="section">
       <h3>Contato</h3>
       <div class="social-links">
-        <a class="link" aria-label="Phone number" (click)="showContactInfo()">
+        <button type="button" class="link" aria-label="Phone number" (click)="showContactInfo()">
           <img src="/icons/phone.png" alt="Número de contato" loading="lazy"/>
-        </a>
+        </button>
       </div>
     </div>
 
     <div class="section">
       <h3>Horário</h3>
       <div class="social-links">
-        <a class="link" aria-label="Schedule" (click)="showSchedule()">
+        <button type="button" class="link" aria-label="Schedule" (click)="showSchedule()">
           <img src="/icons/scheduling.png" alt="Link para o Instagram" loading="lazy"/>
-        </a>
+        </button>
       </div>
     </div>
 
@@ -47,4 +47,13 @@
       reservados.
     </p>
   </div>
+
+  <app-info-modal
+    [open]="isModalOpen"
+    [title]="modalTitle"
+    [description]="modalDescription"
+    [items]="modalItems"
+    [footerNote]="modalFooterNote"
+    (closed)="closeModal()"
+  />
 </footer>
